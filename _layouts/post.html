@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ site.baseurl }}/">Home</a>
+        <a href="{{ site.baseurl }}/blog">Blog</a>
+        <a href="{{ site.baseurl }}/about">About</a>
+    </nav>
+    <header>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.date | date: "%B %d, %Y" }}</p>
+    </header>
+    <div class="content">
+        {{ content }}
+    </div>
+</body>
+</html>
