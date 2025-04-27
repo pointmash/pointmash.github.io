@@ -1,0 +1,6 @@
+title: pointmash
+description: Mapping the market
+baseurl: ""
+url: "https://pointmash.github.io" # Replace with your GitHub Pages URL
+plugins:
+  - jekyll-feed
