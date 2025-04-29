@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }}</title>
     <style>
+        html {
+            min-height: 100%; /* Ensure full viewport height */
+        }
         body {
             margin: 0;
             padding: 20px;
@@ -23,6 +26,8 @@
         .content {
             max-width: 800px;
             margin: 0 auto;
+            /* Added */
+            flex-grow: 1; /* Expand to push footer down */
         }
         img {
             max-width: 100%;
@@ -49,7 +54,8 @@
         padding: 20px 0;
         font-size: 14px;
         color: #cccccc;
-        margin-top: 20px;
+        /* Modified */
+        margin-top: auto; /* Changed from margin-top: 20px to auto */
         }
     </style>
 </head>
