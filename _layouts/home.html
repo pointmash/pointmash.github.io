@@ -8,10 +8,10 @@
         body {
             position: relative;
             margin: 0;
-            height: 100vh;
+            min-height: 100vh; /* Changed from height to min-height */
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            /* Removed justify-content: space-between;*/
             align-items: center;
             background-image: url('{{ site.baseurl }}/images/background.jpg');
             background-size: cover;
@@ -73,7 +73,7 @@
     padding: 20px 0;
     font-size: 14px;
     color: #cccccc;
-    margin-top: 20px;
+    margin-top: auto; /* Changed from margin-top: 20px to auto */
         }
     </style>
 </head>
