@@ -35,22 +35,16 @@
             /* Added */
             flex-grow: 1; /* Expand to push footer down */
         }
+        /* Added: Ensure all paragraphs in .content have the same font size */
+        .content p {
+            font-size: 16px; /* Match the body font size */
+        }
         img {
             max-width: 100%;
             height: auto;
             display: block;
             margin: 20px 0;
         } 
-        /* Added: Style for images to enable text wrapping */
-        .content img {
-            float: right; /* Float image to the right */
-            width: 300px; /* Set a width for the image */
-            margin: 10px 0 10px 20px; /* Add spacing: top, right, bottom, left */
-        }
-        /* Added: Clearfix to ensure text after the image starts on a new line */
-        .content p:nth-of-type(2) {
-            clear: right; /* Clear the float after the second paragraph */
-        }
         nav {
             position: absolute;
             top: 20px;
