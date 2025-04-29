@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | {{ site.title }}</title>
     <style>
+        /* Added */
+        html {
+            min-height: 100%;
+        }
         body {
             margin: 0;
             padding: 20px;
@@ -12,6 +16,10 @@
             color: #ffffff;
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            /* Added */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             text-align: center;
@@ -23,6 +31,8 @@
         .content {
             max-width: 800px;
             margin: 0 auto;
+            /* Added */
+            flex-grow: 1;
         }
         .social-links {
             margin: 20px 0;
@@ -55,7 +65,8 @@
         padding: 20px 0;
         font-size: 14px;
         color: #cccccc;
-        margin-top: 20px;
+        /* Modified */
+        margin-top: auto; /* Changed from margin-top: 20px */
         }
     </style>
 </head>
