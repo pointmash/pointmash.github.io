@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | {{ site.title }}</title>
     <style>
+        html {
+            min-height: 100%; /* Ensure full viewport height */
+        }
         body {
             margin: 0;
             padding: 20px;
@@ -12,6 +15,9 @@
             color: #ffffff;
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            display: flex; /* Add flexbox */
+            flex-direction: column; /* Stack vertically */
+            min-height: 100vh; /* At least viewport height */
         }
         header {
             text-align: center;
@@ -23,6 +29,7 @@
         .content {
             max-width: 800px;
             margin: 0 auto;
+            flex-grow: 1; /* Expand to push footer down */
         }
         ul {
             list-style: none;
@@ -41,7 +48,7 @@
             text-decoration: underline;
         }
         li span {
-    font-size: 16px; /* Reduces the font size of the date */
+            font-size: 16px; /* Reduces the font size of the date */
         }
         nav {
             position: absolute;
@@ -62,7 +69,7 @@
             padding: 20px 0;
             font-size: 14px;
             color: #cccccc;
-            margin-top: 20px;
+            margin-top: auto; /* Push to bottom */
         }
     </style>
 </head>
