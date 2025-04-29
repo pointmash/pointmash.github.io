@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }}</title>
     <style>
+        /* Added: CSS reset to normalize font sizes */
+        * {
+            font-size: 100%; /* Reset to browser default, will inherit from body */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         html {
             min-height: 100%; /* Ensure full viewport height */
         }
@@ -43,6 +50,13 @@
         /* Added: Ensure all paragraphs in .content have the same font size */
         .content p {
             font-size: 16px !important; /* Match the body font size */
+            /* Added: Ensure first paragraph isn’t affected by browser defaults */
+        .content p:first-of-type {
+            font-size: 16px !important;
+        }
+        /* Added: Ensure subsequent paragraphs are consistent */
+        .content p:not(:first-of-type) {
+            font-size: 16px !important;
         }
         img {
             max-width: 100%;
